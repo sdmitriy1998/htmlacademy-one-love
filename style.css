@@ -340,6 +340,7 @@ h4{
 .circle-menu{
   position: relative;
   left: -8px;
+  top: 10px;
   background-color: white;
 }
 

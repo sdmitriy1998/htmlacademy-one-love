@@ -424,7 +424,7 @@ h4{
     backface-visibility: hidden;
     pointer-events: auto;
   
-    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .circle-menu__text {

@@ -60,6 +60,7 @@ h4{
 
 .section-container{
   max-width: 1170px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -75,6 +76,11 @@ h4{
 .main-nav__list{
   display: flex;
   justify-content: space-between;
+  
+}
+
+.main-nav__item:nth-child(2){
+  display: none;
 }
 
 .main-nav__link{
@@ -87,7 +93,7 @@ h4{
 }
 
 .section-header__content{
-  background: url("img/hotel.jpg") no-repeat 50% 85%;
+  background: url("img/hotel.jpg") no-repeat 50% 50%;
   background-size: cover;
   height: 464px;
 }
@@ -117,6 +123,7 @@ h4{
 
 .section-header__title{
   color: white; 
+  text-align: center;
 }
 
 .section-header__subtitle{
@@ -134,8 +141,7 @@ h4{
   margin-bottom: 50px; 
 }
 
-.section-reviews__title{
-  
+.section-reviews__title{  
   text-align: center;
 }
 
@@ -146,13 +152,17 @@ h4{
 }
 
 .reviews-post{
-  margin: 20px 0 0 10px;
+  margin: 20px 10px 0 0;
   flex-basis: 370px;
 }
 
 .reviews-post__title{
   margin-top: 20px;
   margin-bottom: 11px;
+}
+
+.reviews-post__image{
+  width: 100%;
 }
 
 .reviews-post__title_orange{
@@ -213,6 +223,7 @@ h4{
 
 .promo-list__title{
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .promo-list__text{
@@ -253,7 +264,7 @@ h4{
   right: 29px;
   width: 20px;
   height: 20px;
-  background: url(img/promo_icon.svg) no-repeat;
+  background: url("img/promo_icon.svg") no-repeat;
 }
 
 /*=== /PROMO ====*/
@@ -290,15 +301,15 @@ h4{
 }
 
 .socials__instagram{
-  background: url("/img/instagram.svg") no-repeat 50% 50%;
+  background: url("img/instagram.svg") no-repeat 50% 50%;
 }
 
 .socials__twitter{
-  background: url("/img/twitter.svg") no-repeat 50% 50%;
+  background: url("img/twitter.svg") no-repeat 50% 50%;
 }
 
 .socials__facebook{
-  background: url("/img/facebook.svg") no-repeat 50% 50%;
+  background: url("img/facebook.svg") no-repeat 50% 50%;
 }
 
 .socials__item{
@@ -306,9 +317,6 @@ h4{
   width: 45px;
   height: 45px;
   background-color: #fff;
-}
-
-.socials__item{
   margin-right: 14px;
 }
 
@@ -325,3 +333,223 @@ h4{
 }
 
 /*=== /HOVER LINK ====*/
+
+
+/*=== MENU ====*/
+
+.circle-menu{
+  position: relative;
+  left: -8px;
+  background-color: white;
+}
+
+.circle-menu__button{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background: url(img/menu_icon.svg) no-repeat 50% 50% white;
+    height: 54px;
+    width: 56px;
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle-menu__list{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .1s ease;
+}
+
+.circle-menu__list_opened{
+    opacity: 1;
+    display: block;
+}
+
+.circle-menu__center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 50%;
+}
+
+.circle-menu__item{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transform-origin: 100% 100%;
+    width: 9.6em;
+    height: 10em;
+    background-color: rgba(255,121,49,0.85);
+    overflow: hidden;
+}
+
+.circle-menu__item:hover{
+  background-color:#FF7931;
+}
+
+.circle-menu__link{
+    position: absolute;
+    right: -7.25em;
+    bottom: -7.25em;
+    display: block;
+    width: 14.5em;
+    height: 14.5em;
+    border-radius: 50%;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.85em;
+    line-height: 2;
+    transform: skew(-60deg) rotate(-75deg) scale(1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    pointer-events: auto;
+}
+
+.circle-menu__text {
+    position: relative;
+    display: block;
+    bottom: 4em;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    text-align: end;
+}
+
+.circle-menu__text_other {
+    position: relative;
+    display: block;
+    bottom: 4em;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+   text-align: start;
+}
+
+.circle-menu__item:nth-child(1){
+  transform: rotate(-15deg) skew(60deg);
+}
+
+.circle-menu__item:nth-child(2){
+  transform: rotate(-45deg) skew(60deg);
+}
+
+.circle-menu__item:nth-child(3){
+  transform: rotate(-75deg)skew(60deg);
+}
+
+.circle-menu__item:nth-child(4){
+  transform: rotate(-105deg)skew(60deg);
+}
+
+.circle-menu__item:nth-child(5){
+  transform: rotate(-135deg)skew(60deg);
+}
+
+.circle-menu__item:nth-child(6){
+  transform: rotate(-165deg)skew(60deg);
+}
+
+.circle-menu__item:nth-child(7){
+  transform: rotate(-195deg)skew(60deg);
+}
+/*=== /MENU ====*/
+
+/*=== MEDIA ====*/
+
+
+@media (max-width: 991px){
+    .section-header__title{
+      font-size: 4em;
+    }
+    .main-nav__link{
+      font-size: 0.875em;
+    }
+}
+
+@media (max-width: 860px){
+    .page-title{
+      margin-top: 15px;
+    }
+    .main-nav__list{
+      justify-content: space-around;
+    }
+
+    .main-nav__item:not(:nth-child(-n+3)){
+      display: none;
+    }
+    .main-nav__item:nth-child(2){
+      display: block;
+    }
+    .main-nav__link{
+      font-size: 1.3em;
+    }
+    .section-header__icon-inner{
+      display: none;
+    }
+    .section-header__content-wrapper{
+      margin-top: 120px;
+    }
+    .section-header__nav {
+      margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 767px){
+    .main-nav__list{
+      justify-content: space-between;
+    }
+    .section-header__title{
+      font-size: 3em;
+    }
+    .main-nav__link{
+      font-size: 1em;
+    }
+    .reviews-post__title {
+      text-align: center;
+    }
+    .reviews-post__text {
+      text-align: center;
+    }
+
+}
+@media (max-width: 435px){
+    .page-title{
+      font-size: 2em;
+    }
+    .circle-menu_margin {
+      margin: 50px 0 0px;
+    }
+    .circle-menu{
+      left: 0px;
+    }
+    .section-reviews {
+      margin-bottom: 20px;
+    }
+    .reviews-post {
+      margin: 20px 0;
+    }
+    .section-promo {
+      margin-bottom: 20px;
+    }
+
+}
+
+/*=== /MEDIA ====*/

@@ -423,6 +423,8 @@ h4{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     pointer-events: auto;
+  
+    outline: none;
 }
 
 .circle-menu__text {

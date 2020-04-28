@@ -400,6 +400,7 @@ h4{
     overflow: hidden;
     opacity: 0;
     transition: all .1s ease;
+    outline: none;
 }
 
 .circle-menu__list_opened{
@@ -616,6 +617,9 @@ h4{
     .circle-menu{
       left: 0px;
     }
+    .circle-menu__button{
+      transition: 0s;
+    }
     .section-reviews {
       margin-bottom: 20px;
     }
@@ -629,6 +633,7 @@ h4{
       flex-direction: column;
       justify-content: center;
     }
+  
 
 }
 

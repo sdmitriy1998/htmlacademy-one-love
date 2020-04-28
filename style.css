@@ -453,6 +453,7 @@ h4{
     transform: skew(-60deg) rotate(-75deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    outline: none;
 }
 
 .circle-menu__text {

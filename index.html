@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>Новости культуры</title>
         <link rel="stylesheet" href="style.css">
+        <script src = "https://kit.fontawesome.com/f88d2fa247.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
     <body>
@@ -18,7 +19,6 @@
                             <li class ="main-nav__item main-nav-item__circle">
                                 <div class = "circle-menu" id="circle_menu">
                                     <button class = "circle-menu__button" id = "circle_button"></button>
-                                    <div class="circle-menu__center"></div>
                                     <ul class = "circle-menu__list" id = "circle_list">
                                         <li class = "circle-menu__item"><a class = "circle-menu__link" href="#"><span class = "circle-menu__text">Кино</span></a></li>
                                         <li class = "circle-menu__item"><a class = "circle-menu__link" href="#"><span class = "circle-menu__text">Музыка</span></a></li>
@@ -58,32 +58,38 @@
             </div>
         </header>
 
-        <main>
+        <main class = "section-main">
             <section class = "section-reviews">
                 <div class ="section-container">
                     <h3 class ="section-reviews__title">Обзоры</h3>
                     <div class ="section-reviews__content">
                         <article class ="reviews-post">
-                            <img class ="reviews-post__image" src="img/reviews-1.jpg" alt="">
-                            <h4 class ="reviews-post__title">«Шальные годы» Монпарнаса</h4>
-                            <p class ="reviews-post__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября 
-                                    проходит выставка «Шальные годы Монпарнаса»
-                            </p>
+                            <a href = "#" class ="rewiews-post__link">
+                                <img class ="reviews-post__image" src="img/reviews-1.jpg" alt="">
+                                <h4 class ="reviews-post__title">«Шальные годы» Монпарнаса</h4>
+                                <p class ="reviews-post__text">В Музее изобразительных искусств имени Пушкина с 29 сентября по 29 ноября 
+                                        проходит выставка «Шальные годы Монпарнаса»
+                                </p>
+                            </a>
                         </article>
                         <article class ="reviews-post">
-                            <img class ="reviews-post__image" src="img/reviews-2.jpg" alt="">
-                            <h4 class ="reviews-post__title reviews-post__title_orange">Анатомия за 30 секунд</h4>
-                            <p class ="reviews-post__text">Сейчас, когда мир открыт нараспашку для человека 
-                                    и его познавательных изысканий, интерес 
-                                    к научно‑популярной литературе заметно вырос
-                            </p>
+                            <a href = "#" class ="rewiews-post__link">
+                                <img class ="reviews-post__image" src="img/reviews-2.jpg" alt="">
+                                <h4 class ="reviews-post__title reviews-post__title_orange">Анатомия за 30 секунд</h4>
+                                <p class ="reviews-post__text">Сейчас, когда мир открыт нараспашку для человека 
+                                        и его познавательных изысканий, интерес 
+                                        к научно‑популярной литературе заметно вырос
+                                </p>
+                            </a>
                         </article>
                         <article class ="reviews-post">
-                            <img class ="reviews-post__image" src="img/reviews-3.png" alt="">
-                            <h4 class ="reviews-post__title">Сферические чудаки</h4>
-                            <p class ="reviews-post__text">Корреспондентам «Культурного обозревателя» посчастливилось 
-                                    побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» 
-                            </p>
+                            <a href = "#" class ="rewiews-post__link">
+                                <img class ="reviews-post__image" src="img/reviews-3.png" alt="">
+                                <h4 class ="reviews-post__title">Сферические чудаки</h4>
+                                <p class ="reviews-post__text">Корреспондентам «Культурного обозревателя» посчастливилось 
+                                        побывать в театре «Сфера» на премьере спектакля «Чудаки и зануды» 
+                                </p>
+                            </a>
                         </article>
                     </div>
                 </div>                    
@@ -91,7 +97,6 @@
 
             <section class = "section-promo">
                 <div class="section-container">
-                    <div class = "section-promo__background"></div>
                     <div class="section-promo__content">
                         <h3 class = "section-promo__title">Абонементы в театр</h3>
                         <div class = "section-promo__list">
@@ -125,7 +130,7 @@
         <footer class = "section-footer">
             <div class="section-container">
                 <h1 class = "section-footer__title">Новости культуры</h1>
-                <ul class ="main-nav__list">
+                <ul class ="main-nav__list main-nav__list_layout">
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Новости</a></li>
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Обзоры</a></li>
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Музыка</a></li>
@@ -135,13 +140,18 @@
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Литература</a></li>
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Религия</a></li>
                     <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Живопись</a></li>
-                    <li class ="main-nav__item"><a href="#" class ="main-nav__link main-nav__link_white">Живопись</a></li>
                 </ul>
                 <div class = "section-footer__socials">
                     <ul class = "socials__list">
-                        <a href="" class="socials__link"><li class = "socials__item socials__instagram"></li></a>
-                        <a href="" class="socials__link"><li class = "socials__item socials__facebook"></li></a>
-                        <a href="" class="socials__link"><li class = "socials__item socials__twitter"></li></a>
+                        <li class = "socials__item">
+                            <a href="#" class="socials__link socials__instagram"><i class = "fa fa-instagram"></i></a>
+                        </li>
+                        <li class = "socials__item">
+                            <a href="#" class="socials__link socials__facebook"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class = "socials__item">
+                            <a href="#" class="socials__link socials__twitter"><i class = "fa fa-twitter"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -5,7 +5,6 @@
 	wrapper = document.getElementById('circle_list');
 	
 
-    //open and close menu when the button is clicked
 	var open = false;
 	button.addEventListener('click', handler, false);
 

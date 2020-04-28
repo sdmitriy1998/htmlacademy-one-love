@@ -76,7 +76,10 @@ h4{
 .main-nav__list{
   display: flex;
   justify-content: space-between;
-  
+}
+
+.main-nav__list_layout{
+  flex-wrap: wrap;
 }
 
 .main-nav__item:nth-child(2){
@@ -147,13 +150,20 @@ h4{
 
 .section-reviews__content{
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .reviews-post{
-  margin: 20px 10px 0 0;
+  margin-top: 20px;
   flex-basis: 370px;
+}
+
+.rewiews-post__link{
+  text-decoration: none;
+  color: black;
+}
+.reviews-post:not(:last-child){
+  margin-right: 10px;
 }
 
 .reviews-post__title{
@@ -162,11 +172,7 @@ h4{
 }
 
 .reviews-post__image{
-  width: 100%;
-}
-
-.reviews-post__title_orange{
-  color: #FF7931;
+  max-width: 100%;
 }
 
 /*=== /REVIEWS ====*/
@@ -180,14 +186,16 @@ h4{
   background: #F7F7F7;
 }
 
-.section-promo__background{
+.section-promo::before{
+  content: "";
+  display: block;
+  width: 700px;
+  height: 700px;
   position: absolute;
   left: 50%;
   top: -75px;
   transform: translateX(-50%);
   background: #FFFFFF;
-  width: 700px;
-  height: 700px;
   border-radius: 50%; 
 }
 
@@ -249,8 +257,10 @@ h4{
   line-height: 120%;
   font-weight: bold;
   text-transform: uppercase;
+  outline: none;
   letter-spacing: 2px;
   color: white;
+  transition: 0.2s;
   background-color: #FF7931;
   border: none;
   cursor: pointer;
@@ -295,45 +305,54 @@ h4{
   color: white;
 }
 
+.socials__item:not(:last-child){
+  margin-right: 14px;
+}
+
 .socials__list{
   display: flex;
   align-items: center;
 }
 
+.socials__link{
+  display: flex;
+  width: 47px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.1s;
+  background-color: white;
+  font-size: 26px;
+  color: #575757;
+}
+
 .socials__instagram{
-  background: url("img/instagram.svg") no-repeat 50% 50%;
+  font-size: 30px;
 }
 
-.socials__twitter{
-  background: url("img/twitter.svg") no-repeat 50% 50%;
+.socials__link:hover.socials__instagram{
+  color: #ffffff;
+  background-image: linear-gradient(30deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.socials__link:hover.socials__facebook{
+  color: #ffffff;
+  background-color: #3b5998;
+}
+.socials__link:hover.socials__twitter{
+  color: #ffffff;
+  background-color: #1da1f2;
 }
 
-.socials__facebook{
-  background: url("img/facebook.svg") no-repeat 50% 50%;
+.socials__link i{
+  transition: 0.4s;
 }
 
-.socials__item{
-  background-size: 50% 50%;
-  width: 45px;
-  height: 45px;
-  background-color: #fff;
-  margin-right: 14px;
+.socials__link:hover i{
+  transform: scale(1.1) rotate(360deg);
 }
 
 /*=== /FOOTER ====*/
-
-/*=== HOVER LINK ====*/
-
-.main-nav__link:hover{
-  opacity: 0.3;
-}
-
-.section-promo__button:hover{
-  opacity: 0.8;
-}
-
-/*=== /HOVER LINK ====*/
-
 
 /*=== MENU ====*/
 
@@ -343,20 +362,27 @@ h4{
   top: 10px;
   background-color: white;
 }
-
 .circle-menu__button{
-  position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
     outline: none;
-    background: url(img/menu_icon.svg) no-repeat 50% 50% white;
+    background: url("img/menu_icon.svg") no-repeat 50% 50% white;
+    background-size: 70%;
     height: 54px;
     width: 56px;
     z-index: 10;
     border-radius: 50%;
+    border: 2px solid black;
     cursor: pointer;
+    transition: 0.2s;
+}
+.circle-menu__button_opened{
+    background: white;
+    background: url("img/menu_icon-2.svg") no-repeat 50% 50% white;
+    background-size: 60%;
 }
 
 .circle-menu__list{
@@ -365,8 +391,8 @@ h4{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
+    width: 265px;
+    height: 265px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -395,14 +421,18 @@ h4{
     top: -10px;
     left: -10px;
     transform-origin: 100% 100%;
-    width: 9.6em;
-    height: 10em;
-    background-color: rgba(255,121,49,0.85);
+    width: 10.2em;
+    height: 10.3em;
+    background-color: rgb(255,121,49);
     overflow: hidden;
 }
 
+.circle-menu__item:nth-child(2n){
+  background-color: rgb(248, 102, 24);
+}
+
 .circle-menu__item:hover{
-  background-color:#FF7931;
+  background-color:rgb(255, 136, 72);
 }
 
 .circle-menu__link{
@@ -419,12 +449,9 @@ h4{
     text-decoration: none;
     font-size: 0.85em;
     line-height: 2;
-    transform: skew(-60deg) rotate(-75deg) scale(1);
+    transform: skew(-60deg) rotate(-75deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    pointer-events: auto;
-  
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .circle-menu__text {
@@ -474,15 +501,53 @@ h4{
 }
 /*=== /MENU ====*/
 
+/*=== HOVER LINK ====*/
+
+.circle-menu__button:hover{
+  top: 2px;
+}
+
+.main-nav__link:hover{
+  color: #FF7931;
+}
+
+.main-nav__link:active{
+  opacity: 0.3;
+}
+
+.section-promo__button:hover{
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 136, 72);
+}
+.section-promo__button:active{
+  transform: translateY(0px);
+  background-color: rgb(240, 100, 25);
+}
+
+.rewiews-post__link:hover .reviews-post__title{
+  color: #FF7931;
+}
+.rewiews-post__link:active .reviews-post__title{
+  opacity: 0.3;
+}
+/*=== /HOVER LINK ====*/
+
+
+
 /*=== MEDIA ====*/
 
 
-@media (max-width: 991px){
+@media only screen and (max-width: 991px){
     .section-header__title{
       font-size: 4em;
     }
     .main-nav__link{
       font-size: 0.875em;
+    }
+    .section-reviews__content{
+      justify-content: space-around;
+      flex-wrap:wrap;
     }
 }
 
@@ -497,6 +562,13 @@ h4{
     .main-nav__item:not(:nth-child(-n+3)){
       display: none;
     }
+
+    .main-nav__list_layout .main-nav__item{
+      display: block;
+      flex-basis: 26%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
     .main-nav__item:nth-child(2){
       display: block;
     }
@@ -507,11 +579,12 @@ h4{
       display: none;
     }
     .section-header__content-wrapper{
-      margin-top: 120px;
+      margin-top: 140px;
     }
     .section-header__nav {
       margin-bottom: 20px;
     }
+
 
 }
 
@@ -533,7 +606,7 @@ h4{
     }
 
 }
-@media (max-width: 435px){
+@media (max-width: 445px){
     .page-title{
       font-size: 2em;
     }
@@ -546,11 +619,15 @@ h4{
     .section-reviews {
       margin-bottom: 20px;
     }
-    .reviews-post {
-      margin: 20px 0;
+    .reviews-post:not(:last-child){
+      margin-right: 0px;
     }
     .section-promo {
       margin-bottom: 20px;
+    }
+    .main-nav__list_layout{
+      flex-direction: column;
+      justify-content: center;
     }
 
 }

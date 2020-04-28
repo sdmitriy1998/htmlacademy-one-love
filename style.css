@@ -377,7 +377,6 @@ h4{
     border-radius: 50%;
     border: 2px solid black;
     cursor: pointer;
-    transition: 0.2s;
 }
 .circle-menu__button_opened{
     background: white;
@@ -609,9 +608,6 @@ h4{
     }
     .circle-menu{
       left: 0px;
-    }
-    .circle-menu__button{
-      transition: 0s;
     }
     .section-reviews {
       margin-bottom: 20px;
